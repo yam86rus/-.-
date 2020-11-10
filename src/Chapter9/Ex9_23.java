@@ -3,7 +3,7 @@ package Chapter9;
 
 import java.util.Scanner;
 
-public class Ex19_23 {
+public class Ex9_23 {
     public static void main(String[] args) {
         String str = "Слово";
         int m = 0, n = 2;

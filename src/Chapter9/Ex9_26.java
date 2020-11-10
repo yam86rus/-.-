@@ -2,7 +2,7 @@ package Chapter9;
 
 //9.26. Из слова вертикаль путем "вырезок" и "склеек" его букв получить слова тир
 //        и ветка.
-public class Ex19_26 {
+public class Ex9_26 {
     public static void main(String[] args) {
         String str = "вертикаль";
         String str1 = str.substring(3, 5) + str.charAt(2);
