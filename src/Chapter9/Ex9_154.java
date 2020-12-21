@@ -1,2 +1,4 @@
-package Chapter9;public class Ex9_154 {
+package Chapter9;
+
+public class Ex9_154 {
 }
