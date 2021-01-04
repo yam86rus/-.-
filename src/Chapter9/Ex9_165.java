@@ -7,7 +7,7 @@ import java.util.List;
 //9.165. Дано предложение. Напечатать его в обратном порядке слов, например, предложение
 //        мама мыла раму должно быть напечатано в виде раму мыла мама.
 
-public class Ex9_195 {
+public class Ex9_165 {
     public static void main(String[] args) {
         String s = "мама мыла раму";
         String[] ar = s.split(" ");
