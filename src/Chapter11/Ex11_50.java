@@ -20,11 +20,26 @@ public class Ex11_50 {
         System.out.println(Arrays.toString(array));
     }
 
+    static void foo2(int[] array, int b1, int c2) {
+        int[] ar = Arrays.stream(array).map(e -> {
+            if (e == 0) {
+                e += b1;
+            } else if (e < 0) {
+                e += c2;
+            }
+            return e;
+        }).toArray();
+        System.out.println(Arrays.toString(ar));
+    }
+
     public static void main(String[] args) {
-        int[] a = {1, 2, 3, -4, 5};
+        int[] a = {0, -2, 3, -4, 5, 0};
 
         int k1 = a[1];
         int n = 3;
-        foo(a, k1, n);
+        int b = 5;
+        int c = 10;
+//        foo(a, k1, n);
+        foo2(a, b, c);
     }
 }
