@@ -25,7 +25,7 @@ public class Ex14_33 {
         System.out.println(list);
         for (int i = 0; i < list.size(); i++) {
             Double weight = Double.valueOf(list.get(i).split(" ")[1]);
-            map.put(list.get(i).split(" ")[0], weight*0.03+weight);
+            map.put(list.get(i).split(" ")[0], weight * 0.03 + weight);
         }
         System.out.println(map);
 
