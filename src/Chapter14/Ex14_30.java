@@ -30,6 +30,6 @@ public class Ex14_30 {
             e.printStackTrace();
         }
         System.out.println(list);
-        System.out.println("количество слов, начинающихся на букву \"м\": " + list.stream().filter(e->e.startsWith("М")).count());
+        System.out.println("количество слов, начинающихся на букву \"м\":git p " + list.stream().filter(e->e.startsWith("М")).count());
     }
 }
