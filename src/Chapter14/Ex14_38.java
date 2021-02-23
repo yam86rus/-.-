@@ -1,9 +1,6 @@
 package Chapter14;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -20,9 +17,9 @@ public class Ex14_38 {
         int n1 = scanner.nextInt();
         System.out.println("Введите номер элемента из второго файла");
         int n2 = scanner.nextInt();
-        try(BufferedReader bufferedReader = new BufferedReader(new FileReader("C:\\Users\\yam86\\Desktop\\Java-programming-tasks\\src\\Chapter14\\Ex14_38_1.txt"))) {
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader("C:\\Users\\yam86\\Desktop\\Java-programming-tasks\\src\\Chapter14\\Ex14_38_1.txt"))) {
             String s = null;
-            while ((s=bufferedReader.readLine())!=null){
+            while ((s = bufferedReader.readLine()) != null) {
                 list.addAll(Arrays.stream(s.split(" ")).collect(Collectors.toList()));
             }
         } catch (FileNotFoundException e) {
@@ -32,5 +29,12 @@ public class Ex14_38 {
         }
         System.out.println("Выбранный эллемент из первого файла = " + list.get(n1));
         //TODO Доделать запись во второй файл
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("C:\\Users\\yam86\\Desktop\\Java-programming-tasks\\src\\Chapter14\\Ex14_38_2.txt"))) {
+            for (String s : list) {
+                bufferedWriter.write(s);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
