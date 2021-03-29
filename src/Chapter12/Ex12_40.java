@@ -16,15 +16,26 @@ public class Ex12_40 {
         return doubleArray;
     }
 
+    public static double[][] fillRandomNumbersFull(double[][] doubleArray, double min, double max) {
+        for (int i = 0; i < doubleArray.length; i++) {
+            for (int j = 0; j < doubleArray[i].length; j++) {
+                double number = min + ((max - min + 1) * Math.random());
+                number = Math.round(number * 100.0) / 100.0;
+                doubleArray[i][j] = number;
+            }
+        }
+        return doubleArray;
+    }
+
     public static void showInfoFromArray(int[][] da) {
         for (int[] n : da) {
             System.out.println(Arrays.toString(n));
         }
     }
 
-    public static void showStudentsInCourse (int[][] da, int course){
+    public static void showStudentsInCourse(int[][] da, int course) {
         int result = 0;
-        for (int i=0; i<da[course].length; i++){
+        for (int i = 0; i < da[course].length; i++) {
             result += da[course][i];
         }
         System.out.println("Всего студенов на " + course + " курсе= " + result);
@@ -34,7 +45,7 @@ public class Ex12_40 {
         int[][] myDoubleArray = new int[5][8];
         fillRandomNumbersFull(myDoubleArray, 10, 20);
         showInfoFromArray(myDoubleArray);
-        showStudentsInCourse(myDoubleArray,3);
+        showStudentsInCourse(myDoubleArray, 3);
 
     }
 }
