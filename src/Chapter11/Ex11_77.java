@@ -3,7 +3,7 @@ package Chapter11;
 import java.util.stream.Stream;
 
 //11.77. Найти число пар соседних элементов массива, оканчивающихся нулем.
-public class Ex11__77 {
+public class Ex11_77 {
     public static void main(String[] args) {
         int result=0;
         int[] ar = {1,2,0,0,0,0,3,0};
